@@ -15,21 +15,21 @@ class _TabBarState extends State<TabBarclass> {
       child: Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
-          backgroundColor: Colors.orange,
+          backgroundColor: Color(0xff6b91d4),
           title: Text('TabBar Example'),
           bottom: TabBar(
             tabs: [
               Text(
                 'Hanuman',
-                style: TextStyle(fontSize: 20.0),
+                style: TextStyle(fontSize: 17.0),
               ),
               Text(
                 'Ganesha',
-                style: TextStyle(fontSize: 20.0),
+                style: TextStyle(fontSize: 17.0),
               ),
               Text(
                 'Quote',
-                style: TextStyle(fontSize: 20.0),
+                style: TextStyle(fontSize: 17.0),
               ),
             ],
           ),
