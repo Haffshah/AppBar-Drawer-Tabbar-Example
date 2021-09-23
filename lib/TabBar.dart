@@ -21,15 +21,15 @@ class _TabBarState extends State<TabBarclass> {
             tabs: [
               Text(
                 'Hanuman',
-                style: TextStyle(fontSize: 15.0),
+                style: TextStyle(fontSize: 20.0),
               ),
               Text(
                 'Ganesha',
-                style: TextStyle(fontSize: 15.0),
+                style: TextStyle(fontSize: 20.0),
               ),
               Text(
                 'Quote',
-                style: TextStyle(fontSize: 15.0),
+                style: TextStyle(fontSize: 20.0),
               ),
             ],
           ),
