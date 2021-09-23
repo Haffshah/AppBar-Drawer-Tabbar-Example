@@ -37,7 +37,7 @@ class MainHome extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Colors.orange),
+              style: ElevatedButton.styleFrom(primary: Colors.orange, shape: ),
               onPressed: () {
                 Navigator.push(
                   context,
