@@ -11,15 +11,21 @@ class CustomAppBar extends AppBar {
             key: key,
             title: title,
             backgroundColor: backgroundColor,
-  actions: actions);
+            actions: actions);
 }
 
-class ThirdPage extends StatelessWidget {
-  const ThirdPage({Key? key}) : super(key: key);
+class ThirdPage extends StatefulWidget {
+  @override
+  _ThirdPageState createState() => _ThirdPageState();
+}
+
+class _ThirdPageState extends State<ThirdPage> {
+  var _scafoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scafoldKey,
       appBar: CustomAppBar(
         backgroundColor: Colors.amber,
         title: Text('Custom AppBar'),
@@ -50,12 +56,20 @@ class ThirdPage extends StatelessWidget {
               SizedBox(
                 height: 50.0,
               ),
-              Icon(
-                Icons.arrow_back,
-                color: Colors.white,
+              InkWell(
+                onTap: () {
+                  _scafoldKey.currentState?.openDrawer();
+                },
+                child: Icon(
+                  Icons.arrow_back,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
               ),
               Text(
-                'Click On Top Left Menu Icon to See Drawer Open/Close Use',
+                'Click on this Left Arrow icon or Click On Top Left Menu Icon to See Drawer Open/Close Use',
                 style: TextStyle(fontSize: 25.0, color: Colors.white),
               ),
               SizedBox(
@@ -65,10 +79,14 @@ class ThirdPage extends StatelessWidget {
                 Icons.arrow_forward,
                 color: Colors.white,
               ),
+              SizedBox(
+                height: 20.0,
+              ),
               Text(
                 'Click On Top Right Notification Icon to See Custom Appbar Use',
                 style: TextStyle(fontSize: 25.0, color: Colors.white),
-              ), SizedBox(
+              ),
+              SizedBox(
                 height: 50.0,
               ),
               TextButton(
@@ -80,7 +98,10 @@ class ThirdPage extends StatelessWidget {
                     ),
                   );
                 },
-                child: Text('Next Page', style: TextStyle(color: Colors.cyan, fontSize: 25.0),),
+                child: Text(
+                  'Next Page',
+                  style: TextStyle(color: Colors.cyan, fontSize: 25.0),
+                ),
               ),
             ],
           ),
@@ -195,13 +216,13 @@ class DrawerEndClass extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-
         title: Text('Notification'),
-        actions: [Padding(
-
-          padding: const EdgeInsets.only(right: 15.0),
-          child: Icon(Icons.call),
-        ),],
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 15.0),
+            child: Icon(Icons.call),
+          ),
+        ],
       ),
       body: Column(
         children: [
@@ -275,11 +296,12 @@ class FourthPage extends StatelessWidget {
       appBar: CustomAppBar(
         title: Text('Fourth Page '),
         // backgroundColor: Colors.green,
-        actions: [Padding(
-
-      padding: const EdgeInsets.only(right: 15.0),
-          child: Icon(Icons.account_circle_outlined),
-        ),],
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 15.0),
+            child: Icon(Icons.account_circle_outlined),
+          ),
+        ],
       ),
     );
   }

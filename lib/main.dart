@@ -2,6 +2,8 @@ import 'package:appbar_example/AppBar2.dart';
 import 'package:appbar_example/CustomeAppBar.dart';
 import 'package:flutter/material.dart';
 
+import 'TabBar.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -85,11 +87,11 @@ class MainHome extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AppBar2(),
+                    builder: (context) => TabBarclass(),
                   ),
                 );
               },
-              child: Text("Create Demo for Tabbar. "),
+              child: Text("Create Demo for Tabbar "),
             ),
           ],
         ),
