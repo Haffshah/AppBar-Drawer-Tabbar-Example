@@ -37,16 +37,14 @@ class _TabBarState extends State<TabBarclass> {
         body: TabBarView(
           children: [
             Container(
-              height: 250,
-              width: 150,
-              child:  Image.asset('images/hanuman.jpg'),
+              child: Image.asset('images/hanuman.jpg'),
             ),
-            Container(height: 250,
-              width: 150,
-              child:  Image.asset('images/ganesha.jpg'),),
-            Container(height: 250,
-              width: 150,
-              child:  Image.asset('images/quote.png'),),
+            Container(
+              child: Image.asset('images/ganesha.jpg'),
+            ),
+            Container(
+              child: Image.asset('images/quote.png'),
+            ),
           ],
         ),
       ),
