@@ -2,15 +2,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends AppBar {
-  CustomAppBar({Key? key, required Widget title})
-      : super(key: key, title: title, actions: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(right: 15.0),
-            child: Icon(
-              Icons.notifications,
-            ),
-          ),
-        ]);
+  CustomAppBar(
+      {Key? key,
+      required Widget title,
+      Color backgroundColor = Colors.cyan,
+      List<Widget>? actions})
+      : super(
+            key: key,
+            title: title,
+            backgroundColor: backgroundColor,
+  actions: actions);
 }
 
 class ThirdPage extends StatelessWidget {
@@ -19,7 +20,7 @@ class ThirdPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: CustomAppBar(
         backgroundColor: Colors.amber,
         title: Text('Custom AppBar'),
         actions: [
@@ -67,6 +68,19 @@ class ThirdPage extends StatelessWidget {
               Text(
                 'Click On Top Right Notification Icon to See Custom Appbar Use',
                 style: TextStyle(fontSize: 25.0, color: Colors.white),
+              ), SizedBox(
+                height: 50.0,
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => FourthPage(),
+                    ),
+                  );
+                },
+                child: Text('Next Page', style: TextStyle(color: Colors.cyan, fontSize: 25.0),),
               ),
             ],
           ),
@@ -181,7 +195,13 @@ class DrawerEndClass extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
+
         title: Text('Notification'),
+        actions: [Padding(
+
+          padding: const EdgeInsets.only(right: 15.0),
+          child: Icon(Icons.call),
+        ),],
       ),
       body: Column(
         children: [
@@ -241,6 +261,25 @@ class DrawerEndClass extends StatelessWidget {
             color: Colors.grey,
           ),
         ],
+      ),
+    );
+  }
+}
+
+class FourthPage extends StatelessWidget {
+  const FourthPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: CustomAppBar(
+        title: Text('Fourth Page '),
+        // backgroundColor: Colors.green,
+        actions: [Padding(
+
+      padding: const EdgeInsets.only(right: 15.0),
+          child: Icon(Icons.call),
+        ),],
       ),
     );
   }
