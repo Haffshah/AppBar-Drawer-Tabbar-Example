@@ -50,7 +50,7 @@ class _ThirdPageState extends State<ThirdPage> {
         width: double.infinity,
         color: Colors.black,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 35.0, vertical: 50.0),
+          padding: const EdgeInsets.symmetric(horizontal: 35.0, vertical: 30.0),
           child: Column(
             children: [
               SizedBox(
@@ -83,7 +83,7 @@ class _ThirdPageState extends State<ThirdPage> {
                 height: 20.0,
               ),
               Text(
-                'Click On Top Right Notification Icon to See Custom Appbar Use',
+                'Click On Top Right Notification Icon or Below Text Next Page to See Custom Appbar Use',
                 style: TextStyle(fontSize: 25.0, color: Colors.white),
               ),
               SizedBox(
@@ -281,6 +281,18 @@ class DrawerEndClass extends StatelessWidget {
             height: 1.0,
             color: Colors.grey,
           ),
+          Spacer(),
+          Container(
+
+            color: Colors.cyanAccent,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 35.0, vertical: 50.0),
+              child: Text(
+                'This Page is Made using Custom Appbar',
+                style: TextStyle(fontSize: 20.0),
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -302,6 +314,18 @@ class FourthPage extends StatelessWidget {
             child: Icon(Icons.account_circle_outlined),
           ),
         ],
+      ),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.cyanAccent,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 35.0, vertical: 50.0),
+          child: Text(
+            'This Page is Made using Custom Appbar',
+            style: TextStyle(fontSize: 20.0),
+          ),
+        ),
       ),
     );
   }
