@@ -1,6 +1,8 @@
-import 'package:appbar_example/AppBar2.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'LongAppBar.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -53,7 +55,7 @@ class MyHomePage extends StatelessWidget {
             child: Container(
               child: Text(
                 'Use toolbarHeight : height in int  \nThere\'s no longer a need to use PreferredSize. Use toolbarHeight with flexibleSpace.',
-                style: TextStyle(fontSize: 25.0),
+                style: TextStyle(fontSize: 20.0),
               ),
             ),
           ),

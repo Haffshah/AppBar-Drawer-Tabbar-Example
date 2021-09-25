@@ -1,4 +1,4 @@
-name: appbar_example
+name: appbarapp
 description: A new Flutter project.
 
 
@@ -12,8 +12,6 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   url_launcher: ^6.0.10
-  convex_bottom_bar: ^3.0.0
-
 
 
 dev_dependencies:

@@ -1,6 +1,9 @@
-import 'package:appbar_example/ProfilePage.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'ProfilePage.dart';
+import 'main.dart';
 
 class DrawerClass extends StatefulWidget {
   const DrawerClass({
@@ -31,21 +34,18 @@ class _DrawerClassState extends State<DrawerClass> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 20.0),
-                        child: CircleAvatar(
-                          radius: 50.0,
-                          backgroundColor: Colors.white70,
-                          backgroundImage: AssetImage('images/harsh.png'),
-                        ),
+                      CircleAvatar(
+                        radius: 50.0,
+                        backgroundColor: Colors.white70,
+                        backgroundImage: AssetImage('images/harsh.png'),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 35.0),
+                        padding: const EdgeInsets.only(left: 15.0),
                         child: Text(
                           'Harsh M Shah',
                           style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.w500,
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
@@ -73,9 +73,6 @@ class _DrawerClassState extends State<DrawerClass> {
             Divider(
               color: Colors.white,
             ),
-            SizedBox(
-              height: 20,
-            ),
             TextButton(
               onPressed: () {
                 Navigator.push(
@@ -87,30 +84,52 @@ class _DrawerClassState extends State<DrawerClass> {
               },
               child: Text(
                 'Profile',
-                style: TextStyle(fontSize: 24, color: Colors.white),
+                style: TextStyle(fontSize: 20, color: Colors.white),
               ),
             ),
-            SizedBox(
-              height: 45,
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ProfilePage(),
+                  ),
+                );
+              },
+              child: Text(
+                'About',
+                style: TextStyle(fontSize: 20, color: Colors.white),
+              ),
             ),
-            Text(
-              'Settings',
-              style: TextStyle(fontSize: 24, color: Colors.white),
-            ),
-            SizedBox(
-              height: 45,
-            ),
-            Text(
-              'About',
-              style: TextStyle(fontSize: 24, color: Colors.white),
-            ),
-            SizedBox(
-              height: 45,
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ProfilePage(),
+                  ),
+                );
+              },
+              child: Text(
+                'Settings',
+                style: TextStyle(fontSize: 20, color: Colors.white),
+              ),
             ),
             Spacer(),
-            Text(
-              'Log Out',
-              style: TextStyle(fontSize: 24, color: Colors.white),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    maintainState: mounted,
+                    builder: (context) => MainHome(),
+                  ),
+                );
+              },
+              child: Text(
+                'Log Out',
+                style: TextStyle(fontSize: 20, color: Colors.white),
+              ),
             ),
             SizedBox(
               height: 30.0,

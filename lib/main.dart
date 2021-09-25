@@ -1,7 +1,7 @@
-import 'package:appbar_example/AppBar2.dart';
-import 'package:appbar_example/CustomeAppBar.dart';
 import 'package:flutter/material.dart';
 
+import 'CustomeAppBar.dart';
+import 'LongAppBar.dart';
 import 'TabBar.dart';
 
 void main() {
@@ -18,7 +18,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 
 class MainHome extends StatelessWidget {
   const MainHome({Key? key}) : super(key: key);
@@ -38,7 +37,13 @@ class MainHome extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Colors.orange ),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.orange,
+                fixedSize: Size(280, 40),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5),
+                ),
+              ),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -50,10 +55,16 @@ class MainHome extends StatelessWidget {
               child: Text("Dynamic Height of Appbar"),
             ),
             SizedBox(
-              height: 10.0,
+              height: 15.0,
             ),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Colors.orange),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.orange,
+                fixedSize: Size(280, 40),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5),
+                ),
+              ),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -65,10 +76,16 @@ class MainHome extends StatelessWidget {
               child: Text("Custom AppBar In Multiple Screen"),
             ),
             SizedBox(
-              height: 10.0,
+              height: 15.0,
             ),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Colors.orange),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.orange,
+                fixedSize: Size(280, 40),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5),
+                ),
+              ),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -80,10 +97,16 @@ class MainHome extends StatelessWidget {
               child: Text("Open/Close Drawer programmatically"),
             ),
             SizedBox(
-              height: 10.0,
+              height: 15.0,
             ),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Colors.orange),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.orange,
+                fixedSize: Size(280, 40),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5),
+                ),
+              ),
               onPressed: () {
                 Navigator.push(
                   context,
